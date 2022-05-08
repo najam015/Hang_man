@@ -1,3 +1,182 @@
-body{
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #c0d72e;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+}
+
+#box {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 350px;
+  height: 200px;
+  border: 2px dashed white;
+}
+
+.stand {
+  margin-top: 120px;
+  margin-left: 30px;
+  width: 150px;
+  border: 1px solid white;
+}
+
+.danda {
+  position: absolute;
+  margin-top: -23px;
+  margin-left: 40px;
+  height: 140px;
+  width: 0px;
+  border: 2px solid white;
+}
+
+.hangStand {
+  width: 95px;
+  border: 1px solid white;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.hang {
+  height: 10px;
+  border: 1px solid white;
+  width: 0px;
+  margin-top: 0px;
+  margin-left: 100px;
+}
+
+.head {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-left: 88px;
+}
+.neack {
+  position: absolute;
+  width: 0px;
+  height: 60px;
+  border: 1px solid white;
+  margin-left: 100px;
+  margin-top: 25px;
+}
+.righthand {
+  position: absolute;
+  width: 0px;
+  height: 40px;
+  border: 1px solid white;
+  margin-left: 80px;
+  transform: rotate(83deg);
+  margin-top: 20px;
+}
+.lefthand {
+  position: absolute;
+  width: 0px;
+  height: 40px;
+  border: 1px solid white;
+  margin-left: 120px;
+  transform: rotate(-83deg);
+  margin-top: 20px;
+}
+.leftleg {
+  position: absolute;
+  width: 0px;
+  height: 40px;
+  border: 1px solid white;
+  margin-left: 80px;
+  transform: rotate(70deg);
+  margin-top: 72px;
+}
+.rightleg {
+  position: absolute;
+  width: 0px;
+  height: 40px;
+  border: 1px solid white;
+  margin-left: 120px;
+  transform: rotate(-70deg);
+  margin-top: 72px;
+}
+.alphabet {
+  padding: 25px;
+  border: none;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(175, 31, 31);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.btn {
+  margin: 20px;
+}
+#hint {
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: #c0d72e;
+  color: aliceblue;
+  border: 1px solid white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#restart {
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: #c0d72e;
+  color: aliceblue;
+  border: 1px solid white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .alphabet {
+    padding: 25px;
+    border: none;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(175, 31, 31);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .alphabet {
+    padding: 10px;
+    border: none;
+    font-size: 25px;
+    color: rgb(175, 31, 31);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .alphabet {
+    padding: 7px;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .alphabet {
+    padding: 6px;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 335px) {
+  .alphabet {
+    padding: 5px;
+    font-size: 20px;
+    color: rgb(175, 31, 31);
+  }
 }
