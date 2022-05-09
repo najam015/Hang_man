@@ -18,14 +18,14 @@ body {
   border: 2px dashed white;
 }
 
-.stand {
+#stand {
   margin-top: 120px;
   margin-left: 30px;
   width: 150px;
   border: 1px solid white;
 }
 
-.danda {
+#danda {
   position: absolute;
   margin-top: -23px;
   margin-left: 40px;
@@ -34,14 +34,14 @@ body {
   border: 2px solid white;
 }
 
-.hangStand {
+#hangStand {
   width: 95px;
   border: 1px solid white;
   margin-top: 40px;
   margin-left: 20px;
 }
 
-.hang {
+#hang {
   height: 10px;
   border: 1px solid white;
   width: 0px;
@@ -49,7 +49,7 @@ body {
   margin-left: 100px;
 }
 
-.head {
+#head {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -57,7 +57,7 @@ body {
   border: 3px solid white;
   margin-left: 88px;
 }
-.neack {
+#neack {
   position: absolute;
   width: 0px;
   height: 60px;
@@ -65,7 +65,7 @@ body {
   margin-left: 100px;
   margin-top: 25px;
 }
-.righthand {
+#righthand {
   position: absolute;
   width: 0px;
   height: 40px;
@@ -74,7 +74,7 @@ body {
   transform: rotate(83deg);
   margin-top: 20px;
 }
-.lefthand {
+#lefthand {
   position: absolute;
   width: 0px;
   height: 40px;
@@ -83,7 +83,7 @@ body {
   transform: rotate(-83deg);
   margin-top: 20px;
 }
-.leftleg {
+#leftleg {
   position: absolute;
   width: 0px;
   height: 40px;
@@ -92,7 +92,7 @@ body {
   transform: rotate(70deg);
   margin-top: 72px;
 }
-.rightleg {
+#rightleg {
   position: absolute;
   width: 0px;
   height: 40px;
@@ -112,7 +112,7 @@ body {
   border-radius: 10px;
   margin-top: 10px;
 }
-.btn {
+#btn {
   margin: 20px;
 }
 #hint {
