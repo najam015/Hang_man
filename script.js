@@ -1,30 +1,3 @@
-//key board
-a = document.getElementById('a');
-b = document.getElementById('b');
-c = document.getElementById('c');
-d = document.getElementById('d');
-e = document.getElementById('e');
-f = document.getElementById('f');
-g = document.getElementById('g');
-h = document.getElementById('h');
-i = document.getElementById('i');
-j = document.getElementById('j');
-k = document.getElementById('k');
-l = document.getElementById('l');
-m = document.getElementById('m');
-n = document.getElementById('n');
-o = document.getElementById('o');
-p = document.getElementById('p');
-q = document.getElementById('q');
-r = document.getElementById('r');
-s = document.getElementById('s');
-t = document.getElementById('t');
-u = document.getElementById('u');
-v = document.getElementById('v');
-w = document.getElementById('w');
-x = document.getElementById('x');
-y = document.getElementById('y');
-z = document.getElementById('z');
 
 //controllers btns
 hint = document.getElementById('hint');
@@ -51,7 +24,55 @@ words = [
     'element',
     'html',
     'javascript'
-    ]
+]
 
-    let randomWords = words[Math.floor(Math.random() * words.length)]
-    console.log(randomWords)
+parts = [
+    'stand',
+    'danda',
+    'leftleg',
+    'rightleg',
+    'lefthand',
+    'righthand',
+    'neck',
+    'head',
+    'hang'
+]
+
+let counter = 0;
+let retry = 10;
+let userPressedWord = '';
+let randomWords = words[Math.floor(Math.random() * words.length)]
+console.log(randomWords)
+
+//str.includes("Geeks");
+
+function typeWord(w){
+    userPressedWord = w;
+    console.log(userPressedWord);
+}
+
+function isStringIncludes() {
+    var check = randomWords.includes('userPressedWord', 18);
+    console.log(check)
+
+    if(check == randomWords){
+        //show pressed words on screen 
+
+    }
+    else{
+        retry -=1;
+        showManPart()
+    }
+
+}
+
+
+function showManPart() {
+    a = parts[counter];
+    a.style.display.block;
+    indexNextPart()
+}
+
+function indexNextPart(){
+    counter ++;
+}
