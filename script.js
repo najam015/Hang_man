@@ -1,18 +1,19 @@
-
 //controllers btns
 hint = document.getElementById('hint');
 playAgain = document.getElementById('playAgain');
 
 //body parts
-hang = document.getElementById('hang');
-head = document.getElementById('head');
-neck = document.getElementById('neck');
-rightHand = document.getElementById('righthand');
-leftHand = document.getElementById('lefthand');
-rightLeg = document.getElementById('rightleg');
-leftLeg = document.getElementById('leftleg');
-danda = document.getElementById('danda');
-stand = document.getElementById('stand');
+let hang = document.getElementById('hang');
+let head = document.getElementById('head');
+let neck = document.getElementById('neck');
+let rightHand = document.getElementById('righthand');
+let leftHand = document.getElementById('lefthand');
+let rightLeg = document.getElementById('rightleg');
+let leftLeg = document.getElementById('leftleg');
+let danda = document.getElementById('danda');
+let stand = document.getElementById('stand');
+let hangStand = document.getElementById('hangStand');
+let result = document.getElementById('chosenCategary');
 
 words = [
     'milk',
@@ -35,7 +36,8 @@ parts = [
     'righthand',
     'neck',
     'head',
-    'hang'
+    'hang',
+    'hangStand'
 ]
 
 let counter = 0;
@@ -46,33 +48,37 @@ console.log(randomWords)
 
 //str.includes("Geeks");
 
+// split rendom string 
+var chars = randomWords.split('');
+console.log(chars)
+totalChars = chars.length
+result.innerHTML += chars;
+
 function typeWord(w){
     userPressedWord = w;
     console.log(userPressedWord);
+    isStringIncludes(userPressedWord)
 }
 
-function isStringIncludes() {
-    var check = randomWords.includes('userPressedWord', 18);
+function isStringIncludes(a) {
+    var check = randomWords.includes(a);
     console.log(check)
 
     if(check == randomWords){
-        //show pressed words on screen 
+        userPressedWordIndex = chars.indexOf(userPressedWord)
 
+        console.log('index of user pressed word is', userPressedWordIndex);
     }
     else{
         retry -=1;
         showManPart()
+        console.log('Retry Left Back', retry)
     }
 
 }
 
-
 function showManPart() {
     a = parts[counter];
-    a.style.display.block;
-    indexNextPart()
-}
-
-function indexNextPart(){
+    a.style.display = 'block';
     counter ++;
 }
