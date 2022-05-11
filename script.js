@@ -21,7 +21,7 @@ let danda = document.getElementById('danda');
 let stand = document.getElementById('stand');
 let hangStand = document.getElementById('hangStand');
 
-let attemps = document.querySelector('#attemps'); 
+let attemps = document.querySelector('#attemps');
 let result = document.getElementById('chosenCategary');
 let Clue = document.getElementById('Clue');
 
@@ -40,11 +40,11 @@ function generateElements(string){
     var chars = string.split('');
     for(i=0; i<chars.length; i++){
         var div = document.createElement('div');
-        var char = chars[i]; 
+        var char = chars[i];
         div.innerHTML = char;
         div.classList.add("box")
         div.classList.add(char.toLowerCase())
-        wrapper.appendChild(div);    
+        wrapper.appendChild(div);
     }
 }
 
@@ -59,14 +59,14 @@ function showHidenChars(string){
     var chars = string.split('');
     for(i=0; i<chars.length; i++){
         var div = document.getElementsByClassName(char.toLowerCase());
-        var char = chars[i]; 
+        var char = chars[i];
         //div.innerHTML = char;
         //div.classList.add("box")
         div.classList.add("white")
         //div.classList.add(char.toLowerCase())
-        wrapper.appendChild(div);    
+        wrapper.appendChild(div);
     }
-    
+
 }
 
 function typeWord(w){
@@ -78,10 +78,10 @@ function typeWord(w){
 
 function shuffle(s) {
     var arr = s.split('');           // Convert String to array
-    
+
     arr.sort(function() {
       return 0.5 - Math.random();
-    });  
+    });
     s = arr.join('');                // Convert Array to string
     return s;                        // Return shuffled string
   }
@@ -123,7 +123,6 @@ function TryRemainsBack(){
     if(retry <= 0 ){
         dieSound.play();
         Clue.innerHTML = 'You Lose Game!';
-        playAgain.style.display = 'block'
     }
 
 }
