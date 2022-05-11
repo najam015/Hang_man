@@ -1,3 +1,9 @@
+// Sounds
+let dieSound = new Audio('assets/die.wav');
+let hintSound = new Audio('assets/notify.wav');
+let winSound = new Audio('assets/gameWin.wav');
+let keyPressSound = new Audio('assets/keyPress.wav');
+
 //controllers btns
 hint = document.getElementById('hint');
 playAgain = document.getElementById('restart');
@@ -14,11 +20,13 @@ let leftLeg = document.getElementById('leftleg');
 let danda = document.getElementById('danda');
 let stand = document.getElementById('stand');
 let hangStand = document.getElementById('hangStand');
+
+let attemps = document.querySelector('#attemps'); 
 let result = document.getElementById('chosenCategary');
 let Clue = document.getElementById('Clue');
 
 words = ['milk','good','bad','number','learning','gaming','element','html','javascript']
-parts = ['stand','danda','leftleg','rightleg','lefthand','righthand','neck','head','hang','hangStand']
+parts = ['stand','danda','leftLeg','rightLeg','leftHand','rightHand','neck','head','hang','hangStand']
 
 let counter = 0;
 let retry = 10;
@@ -27,14 +35,6 @@ let string = '';
 console.log(string)
 
 generateGame();
-//str.includes("Geeks");
-
-// split rendom string 
-playAgain.style.display = 'none';
-//var chars = randomWords.split('');
-//console.log(chars)
-//totalChars = chars.length
-//result.innerHTML += chars;
 
 function generateElements(string){
     var chars = string.split('');
@@ -55,10 +55,24 @@ function generateGame(){
   console.log(string)
 }
 
+function showHidenChars(string){
+    var chars = string.split('');
+    for(i=0; i<chars.length; i++){
+        var div = document.getElementsByClassName(char.toLowerCase());
+        var char = chars[i]; 
+        //div.innerHTML = char;
+        //div.classList.add("box")
+        div.classList.add("white")
+        //div.classList.add(char.toLowerCase())
+        wrapper.appendChild(div);    
+    }
+    
+}
 
 function typeWord(w){
+    keyPressSound.play();
     userPressedWord = w;
-    console.log(userPressedWord);
+    console.log('user pressed', userPressedWord);
     isStringIncludes(userPressedWord)
 }
 
@@ -73,37 +87,41 @@ function shuffle(s) {
   }
 
   function showHint(string){
+    hintSound.play();
     var s = string;
     s = shuffle(s);
     Clue.innerHTML = s;
   }
 
-function isStringIncludes(a) {
-    var check = string.includes(a);
-    console.log(check)
+function isStringIncludes(userPressedWord) {
+    var check = string.includes(userPressedWord);
+    console.log('Random WOrd is', string)
+    console.log('najam is testing',check)
 
-    if(check == string){
-        userPressedWordIndex = string.indexOf(userPressedWord)
-
-        console.log('index of user pressed word is', userPressedWordIndex);
+    if(check == true){
+        showHidenChars(string);
     }
     else{
         retry -=1;
         showManPart()
         console.log('Retry Left Back', retry)
+        attemps.innerHTML = "Remaning Attemps:"+ retry;
     }
 
 }
 
 function showManPart() {
     a = parts[counter];
-    a.style.background = '#c0d72e'
+    console.log(a);
+    //a.style.background = 'pink';
+    //a.style.background = '#c0d72e'
     TryRemainsBack()
     counter ++;
 }
 
 function TryRemainsBack(){
     if(retry <= 0 ){
+        dieSound.play();
         Clue.innerHTML = 'You Lose Game!';
         playAgain.style.display = 'block'
     }
