@@ -62,26 +62,28 @@ function typeWord(w){
     isStringIncludes(userPressedWord)
 }
 
+function shuffle(s) {
+    var arr = s.split('');           // Convert String to array
+    
+    arr.sort(function() {
+      return 0.5 - Math.random();
+    });  
+    s = arr.join('');                // Convert Array to string
+    return s;                        // Return shuffled string
+  }
 
-function mekeRandomStr(str){   
-        var sb = str;
-         
-        sb += (str);
-      
-        for (var i = 0; i < str.length; i++)
-        {
-            for (var j = 0; j != str.length; j++)
-            Clue.innerHTML = (sb.charAt(i + j));
-        }
-    }
-
+  function showHint(string){
+    var s = string;
+    s = shuffle(s);
+    Clue.innerHTML = s;
+  }
 
 function isStringIncludes(a) {
     var check = string.includes(a);
     console.log(check)
 
     if(check == string){
-        userPressedWordIndex = chars.indexOf(userPressedWord)
+        userPressedWordIndex = string.indexOf(userPressedWord)
 
         console.log('index of user pressed word is', userPressedWordIndex);
     }

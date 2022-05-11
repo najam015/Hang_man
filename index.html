@@ -10,7 +10,7 @@
   <body>
     <div id="wrapper">
       <div id="chosenCategary"></div>
-      <div id="Clue" onclick=" mekeRandomStr(string)">Clue</div>
+      <div id="Clue">Clue</div>
       <div id="box">
         <div id="hangStand"></div>
         <div id="hang"></div>
@@ -59,7 +59,7 @@
         <button class="alphabet" id="m" onclick="typeWord('m')">M</button>
       </section>
       <section id="btn">
-        <button id="hint">Hint</button>
+        <button id="hint" onclick="showHint(string)">Hint</button>
         <button id="restart">Play Again</button>
       </section>
     </div>
