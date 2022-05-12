@@ -57,13 +57,10 @@ function generateGame(){
 
 function showHidenChars(string){
     var chars = string.split('');
-    for(i=0; i<chars.length; i++){
-        var div = document.getElementsByClassName(char.toLowerCase());
+    for(i = 0; i < chars.length; i++){
         var char = chars[i];
-        //div.innerHTML = char;
-        //div.classList.add("box")
+        var div = document.getElementsByClassName(char.toLowerCase());
         div.classList.add("white")
-        //div.classList.add(char.toLowerCase())
         wrapper.appendChild(div);
     }
 
@@ -77,13 +74,13 @@ function typeWord(w){
 }
 
 function shuffle(s) {
-    var arr = s.split('');           // Convert String to array
+    var arr = s.split('');           
 
     arr.sort(function() {
       return 0.5 - Math.random();
     });
-    s = arr.join('');                // Convert Array to string
-    return s;                        // Return shuffled string
+    s = arr.join('');                
+    return s;                        
   }
 
   function showHint(string){
@@ -113,8 +110,6 @@ function isStringIncludes(userPressedWord) {
 function showManPart() {
     a = parts[counter];
     console.log(a);
-    //a.style.background = 'pink';
-    //a.style.background = '#c0d72e'
     TryRemainsBack()
     counter ++;
 }
