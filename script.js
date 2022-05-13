@@ -150,5 +150,15 @@ function disableBtn(userPressedWord){
         winCount += userPressedWord.length;
         console.log("win count = ", winCount);
     }
-
 }
+
+const modal = document.querySelector('.modal');
+const openModal = document.querySelector('.open-button');
+const closeButton = document.querySelector('.close-button');
+
+openModal.addEventListener('click', () =>{
+    modal.show();
+});
+closeButton.addEventListener('click', () =>{
+    modal.close();
+});
