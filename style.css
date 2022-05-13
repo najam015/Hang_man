@@ -5,8 +5,7 @@
 }
 body {
   background-repeat: no-repeat;
-  background-color: #08aeea;
-  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  background-image: linear-gradient(to top, indigo, rgb(150, 69, 150));
   text-align: center;
   color: white;
   font-size: 35px;
@@ -29,6 +28,9 @@ body {
   width: 350px;
   height: 200px;
   border: 2px dashed #d6e95f;
+}
+.centerMan {
+  margin: 20px 100px 20px 80px;
 }
 p {
   margin-top: 5px;
@@ -122,12 +124,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: fit-content;
 }
 
 #keyboard {
   margin-top: 10px;
-  background-color: #fedbae;
+  background-color: #f3d3aa;
   border-radius: 20px;
 }
 .row {
@@ -149,8 +151,50 @@ p {
 }
 #attemps {
   font-size: 1rem;
-  color: blue;
+  color: rgb(255, 160, 122);
 }
 .white {
   color: red;
+}
+
+.info {
+  float: right;
+  cursor: pointer;
+  margin: 10px 10px 0px 0px;
+  background: none;
+  border: none;
+  color: rgb(240, 128, 128);
+}
+.info:hover {
+  cursor: pointer;
+  color: rgb(0, 139, 7);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  padding: 20px;
+  font-size: 30px;
+  border: none;
+  background-image: linear-gradient(to top, indigo, rgb(150, 69, 150));
+  z-index: 1;
+  color: white;
+}
+
+dialog .close-button {
+  margin-top: 10px;
+  padding: 13px 30px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #08aeea;
+  color: white;
+  font-size: 16px;
+}
+dialog .close-button:hover {
+  background-color: #1b63ce;
 }

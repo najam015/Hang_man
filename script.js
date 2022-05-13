@@ -124,5 +124,15 @@ function TryRemainsBack(){
         dieSound.play();
         Clue.innerHTML = 'You Lose Game!';
     }
-
 }
+
+const modal = document.querySelector('.modal');
+const openModal = document.querySelector('.open-button');
+const closeButton = document.querySelector('.close-button');
+
+openModal.addEventListener('click', () =>{
+    modal.show();
+});
+closeButton.addEventListener('click', () =>{
+    modal.close();
+});

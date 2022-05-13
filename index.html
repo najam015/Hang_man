@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="mediaQueries.css" />
   </head>
   <body>
+    <div id="modal">
+      <dialog class="modal">
+        <h2>An intersting modal</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          animi nesciunt magnam sunt repudiandae optio omnis recusandae debitis
+          ratione nam?
+        </p>
+        <button class="close-button">Ok</button>
+      </dialog>
+    </div>
     <div id="wrapper">
       <div id="chosenCategary"></div>
       <div id="Clue">Clue</div>
@@ -17,6 +28,25 @@
         <span id="attemps"></span>
       </div>
       <div id="box">
+        <button class="open-button info">
+          <svg
+            class="svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-info-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+            />
+          </svg>
+        </button>
+        <div class="centerMan">
         <div id="hangStand"></div>
         <div id="hang"></div>
         <div id="head"></div>
@@ -27,6 +57,7 @@
         <div id="rightleg"></div>
         <div id="danda"></div>
         <div id="stand"></div>
+      </div>
       </div>
       <section id="Word"></section>
       <section id="man"></section>
@@ -53,7 +84,7 @@
               class="alphabet bd-lightGreen br-10px d-none"
               style="width: 150px"
             >
-              bacspace
+              backspace
             </button>
             <br />
             <button
