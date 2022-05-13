@@ -16,10 +16,13 @@ body {
   font-size: 40px;
   margin-top: 5px;
 }
+.transparrent{
+  background-color: transparent;
+}
 
 #Clue {
   margin-top: 5px;
-  color: yellow;
+  color: rgb(247, 0, 255);
   font-size: 30px;
 }
 
@@ -38,7 +41,7 @@ p {
   margin-top: 120px;
   margin-left: 30px;
   width: 150px;
-  border: 1px solid #d6e95f;
+  height: 2px;
 }
 
 #danda {
@@ -46,13 +49,11 @@ p {
   margin-top: -23px;
   margin-left: 40px;
   height: 145px;
-  width: 3px;
-  background-color: white;
+  width: 3px; 
 }
 
 #hangStand {
   width: 95px;
-  background-color: white;
   height: 2px;
   margin-top: 40px;
   margin-left: 20px;
@@ -60,7 +61,6 @@ p {
 
 #hang {
   height: 10px;
-  background-color: white;
   width: 1px;
   margin-top: 0px;
   margin-left: 97px;
@@ -71,14 +71,12 @@ p {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: white;
   margin-left: 88px;
 }
 #neack {
   position: absolute;
   width: 1px;
   height: 60px;
-  background-color: white;
   margin-left: 97px;
   margin-top: 20px;
 }
@@ -86,7 +84,6 @@ p {
   position: absolute;
   width: 1px;
   height: 40px;
-  background-color: white;
   margin-left: 77px;
   transform: rotate(83deg);
   margin-top: 20px;
@@ -95,7 +92,6 @@ p {
   position: absolute;
   width: 1px;
   height: 40px;
-  background-color: white;
   margin-left: 117px;
   transform: rotate(-83deg);
   margin-top: 20px;
@@ -104,7 +100,6 @@ p {
   position: absolute;
   width: 1px;
   height: 40px;
-  background-color: white;
   margin-left: 78px;
   transform: rotate(70deg);
   margin-top: 65px;
@@ -113,7 +108,6 @@ p {
   position: absolute;
   width: 1px;
   height: 40px;
-  background-color: white;
   margin-left: 116px;
   transform: rotate(-70deg);
   margin-top: 65px;
@@ -146,11 +140,17 @@ p {
 
 .box {
   display: inline-block;
+  color: transparent;
 }
 #attemps {
   font-size: 1rem;
   color: blue;
 }
+
 .white {
-  color: red;
+  background-color: white;
+}
+
+.chita{
+  color: white;
 }
