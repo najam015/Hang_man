@@ -1,7 +1,7 @@
 // Sounds
 let dieSound = new Audio('assets/die.wav');
 let hintSound = new Audio('assets/notify.wav');
-let winSound = new Audio('assets/gameWin.wav');
+let winSound = new Audio('assets/gameWin.mp3');
 let keyPressSound = new Audio('assets/keyPress.wav');
 
 //controllers btns
@@ -27,7 +27,7 @@ let Clue = document.getElementById('Clue');
 
 words = ['milk','good','bad','number','learning','gaming','element','html','javascript']
 
-let winCount = '';
+let winCount = 0;
 let counter = 0;
 let retry = 10;
 let userPressedWord = '';
@@ -70,7 +70,7 @@ function generateGame(){
 
 function showHidenChars(randomNum, userPressedWord){
         var check = randomNum.includes(userPressedWord);
-        
+
         if(check){
             var char = document.getElementsByClassName(userPressedWord);
 
@@ -84,18 +84,21 @@ function typeWord(w){
     keyPressSound.play();
     userPressedWord = w;
 
+    disableBtn(userPressedWord);
+    winGame(randomNum);
+
     console.log('user pressed', userPressedWord, userPressedWord.length);
     isStringIncludes(userPressedWord);
 
 }
 
 function shuffle(s) {
-    var arr = s.split('');           
+    var arr = s.split('');
     arr.sort(function() {
       return 0.5 - Math.random();
     });
-    s = arr.join('');                
-    return s;                        
+    s = arr.join('');
+    return s;
   }
 
   function showHint(randomNum){
@@ -140,14 +143,17 @@ function winGame(randomNum){
     if(chars.length == winCount ){
         winSound.play();
         Clue.innerHTML = 'You Win The Game!';
+        attemps.innerHTML = '';
     }
-    
+
 }
 
 function disableBtn(userPressedWord){
     if(userPressedWord){
         document.getElementById(userPressedWord.toLowerCase()).disabled = true;
-        winCount += userPressedWord.length;
+        var char = document.getElementsByClassName(userPressedWord).length;
+        console.log('char = ', char)
+        winCount += char;
         console.log("win count = ", winCount);
     }
 }
